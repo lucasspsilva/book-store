@@ -9,6 +9,9 @@ services:
       - .:/code
     depends_on:
       - db
+    environment:
+      - "DJANGO_SECRET_KEY=django-insecure-cw%b)u6(e(jp6+985#b!wuf#kiya^gm_1no#am_#q5mvy=pm&5"
+      - "DJANGO_DEBUG=True"
   db:
     image: postgres:15
     volumes:

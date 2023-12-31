@@ -1,0 +1,15 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+
+build:
+  docker:
+    web: Dockerfile
+
+relase:
+  image: web
+  command:
+    - python manage.py collectstatic --noinput
+
+run:
+  web: gunicorn django_project.wsgi

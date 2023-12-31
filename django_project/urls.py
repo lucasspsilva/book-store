@@ -5,7 +5,7 @@ from django.urls import path, include
 
 urlpatterns = [
     # Django admin
-    path("admin/", admin.site.urls, name="admin"),
+    path("super-secret-admin-url/", admin.site.urls, name="admin"),
     # User management
     path("accounts/", include("allauth.urls")),
     # Local apps
